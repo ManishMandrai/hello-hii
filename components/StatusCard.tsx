@@ -5,7 +5,7 @@ interface StatusCardProps {
     description?: string;
     action?: React.ReactNode;
     className?: string;
-    chinldren?: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 export function StatusCard({
