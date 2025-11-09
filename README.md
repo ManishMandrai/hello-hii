@@ -1,8 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Hello-Hii — Modern Realtime Chat App
 
-## Getting Started
+Hello-Hii is a feature-rich, production-ready chat application built using **Next.js + Convex + Stream**.  
+It supports realtime messaging, authentication, and video calling with a clean UI powered by TailwindCSS.
 
-First, run the development server:
+🔗 **Live App:** https://hello-hii-chat-app.vercel.app/  
+🌐 **Portfolio:** https://devmanish.com  
+
+---
+
+## ✅ Highlights
+
+This project reflects strong skills in:
+
+- Realtime architecture using Convex + Stream
+- Modern and secure authentication (Clerk)
+- Clean, scalable & reusable component structure
+- Smooth video calling integration
+- Production-ready Next.js implementation
+- Polished UI built with Tailwind & Radix UI
+- Strong TypeScript usage
+
+> ✅ Video calling works perfectly!
+
+---
+
+## 🛠 Tech Stack
+
+### **Frontend**
+- Next.js 16
+- React 19
+- Tailwind CSS
+- Radix UI
+- Lucide Icons
+- clsx + class-variance-authority
+
+### **Backend**
+- Convex
+- Stream Chat + Stream Video
+
+### **Authentication**
+- Clerk
+
+### **Language**
+- TypeScript
+
+### **Tooling**
+- ESLint
+- Turbopack
+- tw-animate-css
+
+---
+
+## 📦 Features
+
+- ✅ Realtime 1-on-1 chat
+- ✅ Video calling (Stream VC)
+- ✅ Secure auth with Clerk
+- ✅ Persistent messages
+- ✅ Clean responsive UI
+- ✅ Scalable folder architecture
+- ✅ Fast builds using Turbopack
+
+---
+
+## 🚀 Getting Started
 
 ```bash
 npm run dev
@@ -12,25 +73,3 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
