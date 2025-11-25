@@ -42,6 +42,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     {user?.firstName} {user?.lastName}
                   </span>
                 </div>
+                
               </div>
             </SidebarMenuButton>
           </SidebarMenuItem>

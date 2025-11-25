@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
 import { RedirectToSignIn, useAuth, useUser } from "@clerk/nextjs";
 import { VideoIcon } from "lucide-react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import {
@@ -76,7 +77,7 @@ export default function Dashboard() {
     };
 
     return (
-        <div className="p-2 text-black flex flex-col flex-1">
+        <div className="p-2  flex flex-col flex-1">
             {channel ? (
                 <Channel>
                     <Window>
@@ -120,7 +121,9 @@ export default function Dashboard() {
 
                         {/* App Logo */}
                         <div className="opacity-30">
-                            <img
+                            <Image
+                                width={56}
+                                height={56}
                                 src="/logo.png"  // <-- replace with your PNG/logo path
                                 alt="App Logo"
                                 className="w-20 h-20 object-contain"
@@ -134,8 +137,8 @@ export default function Dashboard() {
 
                         {/* Subtext */}
                         <p className="text-gray-500 text-sm md:text-base max-w-md">
-                            Select a conversation from the sidebar to start chatting.<br />
-                            Stay connected — messaging made simple and fast.
+                            Select a chat from the sidebar to get started.<br />
+                            Stay connected with fast, reliable messaging.
                         </p>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ const Header = () => {
                     src="/logo.png"         
                     alt="Hello - Hii"
                     width={56}              
-                    height={56}
+                    height={60}
                     className="object-contain"
                 />
                 <p className="text-black px-4">Messenger</p>

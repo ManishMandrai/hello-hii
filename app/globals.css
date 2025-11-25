@@ -121,3 +121,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (max-width: 640px) {
+  /* sm breakpoint */
+  .menu {
+    margin-left: auto;
+  }
+}
