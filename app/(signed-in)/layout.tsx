@@ -70,7 +70,7 @@ function IncomingCallModal({
 function Layout({ children }: { children: React.ReactNode }) {
     const { user } = useUser();
     const router = useRouter();
-
+    
 
     // incoming call state
     const [incoming, setIncoming] = useState<{
@@ -153,9 +153,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         if (!user?.id) return;
 
         let mounted = true;
-        const channel = listeners[i].channel as any;  // safe local cast
-        const event = ev as any;
-
+        const listeners: Array<{ channel: any; handler: (ev: any) => void }> = [];
 
         // query and watch channels where this user is a member
         (async () => {
@@ -253,7 +251,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <UserSyncWrapper>
             <Chat
                 client={streamClient}
-            // theme={theme === "dark" ? "messaging dark" : "messaging light"}
+                // theme={theme === "dark" ? "messaging dark" : "messaging light"}
             >
                 <SidebarProvider
                     style={
