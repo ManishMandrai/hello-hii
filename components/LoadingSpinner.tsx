@@ -21,7 +21,7 @@ const LoadingSpinner = ({
 
   return (
     <div
-      className={`flex items-center justify-center h-screen bg-transparent ${className}`}
+      className={`flex items-center justify-center mt-50% bg-transparent ${className}`}
     >
       <div className="flex flex-col items-center gap-4">
         {/* Spinner */}

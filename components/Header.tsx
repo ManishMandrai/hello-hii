@@ -12,7 +12,7 @@ const Header = () => {
     const isDashboard = pathName.startsWith("/dashboard");
     return (
         <header className="flex items-center justify-between px-4 h-15 gap-5 sm:px-36">
-            <Link href="/dashboard" className="font-medium uppercase flex items-center">
+            <Link href="/dashboard" className="font-medium  flex items-center">
                 <Image
                     src="/logo.png"         
                     alt="Hello - Hii"
@@ -20,16 +20,16 @@ const Header = () => {
                     height={60}
                     className="object-contain"
                 />
-                <p className="text-black px-4">Messenger</p>
+                <p className="text-black px-4">Heyy</p>
             </Link>
             <div >
                 <Authenticated>
                     {!isDashboard && (
                         <Link href="/dashboard">
-                            <Button variant="secondary" className="border-2 border-black text-amber-900">Dashboard</Button>
+                            <Button variant="secondary" className="border-2 border-black text-amber-900">Chat</Button>
                         </Link>
                     )}
-                    <UserButton />
+                    {/* <UserButton  /> */}
                 </Authenticated>
                 <Unauthenticated>
                     <SignInButton
