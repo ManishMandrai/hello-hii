@@ -38,7 +38,7 @@ export default function Dashboard() {
             // send a custom channel event to notify members
             // include human-readable callerName so receivers can show it immediately
             await channel.sendEvent({
-                type: "call.invite",
+                type: "call.invite" as any,
                 call_id: callId,
                 created_by: user.id,
                 created_by_name: user.fullName || user.firstName || user.emailAddresses?.[0]?.emailAddress || "Unknown",
