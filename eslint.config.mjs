@@ -1,5 +1,6 @@
 // eslint.config.mjs
 
+import next from "@next/eslint-plugin-next";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 
@@ -7,6 +8,9 @@ export default [
   {
     ignores: ["node_modules/**", ".next/**"],
   },
+
+  // Next.js recommended config (Flat Config)
+  ...next.configs.recommended,
 
   {
     files: ["**/*.{ts,tsx}"],
@@ -22,18 +26,9 @@ export default [
       "@typescript-eslint": tseslint,
     },
 
-    extends: [
-      "next/core-web-vitals", // ✅ uses built-in Next.js ESLint rules
-    ],
-
     rules: {
-      // Disable TypeScript ANY rule
       "@typescript-eslint/no-explicit-any": "off",
-
-      // Disable unused vars
       "@typescript-eslint/no-unused-vars": "off",
-
-      // Disable Next.js <img> rule
       "@next/next/no-img-element": "off",
     },
   },

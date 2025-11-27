@@ -39,11 +39,7 @@ export default function Dashboard() {
                 type: "call.invite",
                 call_id: callId,
                 created_by: user.id,
-                created_by_name:
-                    user?.fullName ||
-                    user?.firstName ||
-                    user?.emailAddresses?.[0]?.emailAddress ||
-                    "Unknown",
+                created_by_name: user.fullName || user.firstName || user.emailAddresses?.[0]?.emailAddress || "Unknown",
                 url: `/dashboard/video-call/${callId}`,
             } as any);
 
