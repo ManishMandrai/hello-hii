@@ -35,16 +35,18 @@ export default function Dashboard() {
         const callId = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
 
         try {
-            // send a custom channel event to notify members
-            // include human-readable callerName so receivers can show it immediately
             await channel.sendEvent({
-                type: "call.invite" as any,
+                type: "call.invite",
                 call_id: callId,
                 created_by: user.id,
-                created_by_name: user.fullName || user.firstName || user.emailAddresses?.[0]?.emailAddress || "Unknown",
+                created_by_name:
+                    user?.fullName ||
+                    user?.firstName ||
+                    user?.emailAddresses?.[0]?.emailAddress ||
+                    "Unknown",
                 url: `/dashboard/video-call/${callId}`,
-                timestamp: new Date().toISOString(),
-            });
+            } as any);
+
 
             // open local caller UI (navigate to the call page)
             setOpen(false);
