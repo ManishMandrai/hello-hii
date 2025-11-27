@@ -70,7 +70,7 @@ function IncomingCallModal({
 function Layout({ children }: { children: React.ReactNode }) {
     const { user } = useUser();
     const router = useRouter();
-    
+
 
     // incoming call state
     const [incoming, setIncoming] = useState<{
@@ -138,7 +138,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                     call_id: incoming.callId,
                     user_id: user.id,
                     timestamp: new Date().toISOString(),
-                }).catch(() => { });
+                } as any);
+
             }
         } catch (e) {
             // ignore
@@ -251,7 +252,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <UserSyncWrapper>
             <Chat
                 client={streamClient}
-                // theme={theme === "dark" ? "messaging dark" : "messaging light"}
+            // theme={theme === "dark" ? "messaging dark" : "messaging light"}
             >
                 <SidebarProvider
                     style={
