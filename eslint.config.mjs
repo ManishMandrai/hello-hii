@@ -1,7 +1,7 @@
 // eslint.config.mjs
-import next from "eslint-plugin-next"
-import tseslint from "@typescript-eslint/eslint-plugin"
-import tsParser from "@typescript-eslint/parser"
+
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
 
 export default [
   {
@@ -20,8 +20,11 @@ export default [
 
     plugins: {
       "@typescript-eslint": tseslint,
-      next,
     },
+
+    extends: [
+      "next/core-web-vitals", // ✅ uses built-in Next.js ESLint rules
+    ],
 
     rules: {
       // Disable TypeScript ANY rule
@@ -34,4 +37,4 @@ export default [
       "@next/next/no-img-element": "off",
     },
   },
-]
+];
