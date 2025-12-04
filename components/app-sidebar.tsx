@@ -11,7 +11,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Button } from "./ui/button";
-import { useUser } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import { ChannelList } from "stream-chat-react";
 import { ChannelFilters, ChannelSort } from "stream-chat";
 import { NewChatDialog } from "./NewChatDialog";
@@ -42,6 +42,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     {user?.firstName} {user?.lastName}
                   </span>
                 </div>
+                      {/* ⭐ Add Clerk User button here */}
+                <UserButton
+                  appearance={{
+                    elements: {
+                      avatarBox: "h-8 w-8", // size adjust
+                    },
+                  }}
+                  afterSignOutUrl="/sign-in"
+                />
                 
               </div>
             </SidebarMenuButton>
